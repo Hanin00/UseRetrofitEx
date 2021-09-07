@@ -1,4 +1,4 @@
-package com.example.useretrofitex.addr;
+package com.example.useretrofitex.activities.addr;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -7,15 +7,14 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.useretrofitex.R;
-import com.example.useretrofitex.addr.adapter.AddrRecyAdapter;
-import com.example.useretrofitex.addr.model.AddressResponse;
+import com.example.useretrofitex.activities.addr.adapter.AddrRecyAdapter;
+import com.example.useretrofitex.activities.addr.model.AddressResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +48,7 @@ public class AddressActivity extends AppCompatActivity {
                 imm.hideSoftInputFromWindow(inputAddr.getWindowToken(),0);
             } else {
                 imm.hideSoftInputFromWindow(inputAddr.getWindowToken(),0);
+                inputAddr.setText("");
                 addrRetrofit();
             }
 
@@ -75,8 +75,6 @@ public class AddressActivity extends AppCompatActivity {
     }
 
     public void addrRetrofit() {
-
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://210.119.145.22/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -99,14 +97,7 @@ public class AddressActivity extends AppCompatActivity {
                 //initiate recyclerview
                 mRecyclerView.setAdapter(mRecyclerViewAdapter);
 
-
                 mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-
-      /*          for (AddressResponse post : posts) {
-                    String content = "";
-                    content += "number: " + post.getNumber() + "\n";
-                    content += "address: " + post.getAddress() + "\n";
-                }*/
 
             }
 

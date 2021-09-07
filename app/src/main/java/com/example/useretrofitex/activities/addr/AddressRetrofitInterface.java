@@ -1,6 +1,6 @@
-package com.example.useretrofitex.addr;
+package com.example.useretrofitex.activities.addr;
 
-import com.example.useretrofitex.addr.model.AddressResponse;
+import com.example.useretrofitex.activities.addr.model.AddressResponse;
 
 import java.util.List;
 

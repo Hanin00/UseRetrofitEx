@@ -1,8 +1,7 @@
-package com.example.useretrofitex.addr.adapter;
+package com.example.useretrofitex.activities.addr.adapter;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.useretrofitex.R;
-import com.example.useretrofitex.addr.model.AddressResponse;
+import com.example.useretrofitex.activities.addr.model.AddressResponse;
 
 import java.util.ArrayList;
 

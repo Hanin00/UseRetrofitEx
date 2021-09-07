@@ -23,7 +23,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".addr.AddressActivity"/>
+            android:name=".activities.addr.AddressActivity"/>
+        <activity
+            android:name=".activities.login.LoginActivity"/>
     </application>
 
 </manifest>

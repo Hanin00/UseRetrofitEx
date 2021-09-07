@@ -1,11 +1,13 @@
-package com.example.useretrofitex.addr.model;
+package com.example.useretrofitex.activities.addr.model;
 
 import com.google.gson.annotations.SerializedName;
 
 public class AddressResponse {
     private String address;
+
     @SerializedName("body")
     private String text;
+
     private int number;
 
     public String getAddress() {

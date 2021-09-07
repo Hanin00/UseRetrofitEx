@@ -4,16 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30dp"
     tools:context=".MainActivity">
 
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/main_btn_addr"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Address"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/main_btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/main_btn_addr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_login" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/main_btn_int_sensor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="센서 데이터 조회"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_addr" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/main_btn_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="위치 데이터 조회"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_int_sensor" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
